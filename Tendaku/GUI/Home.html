@@ -3,54 +3,113 @@
 <html>
 	<head>
 		<title>Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="mystyles.css">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	</head>
+	<script>
+	function w3_open() {
+		document.getElementById("mySidenav").style.display = "block";
+	}
+	function w3_close() {
+		document.getElementById("mySidenav").style.display = "none";
+	}
+	
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-white", "");
+	  }
+	  x[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " w3-white";
+	}
+	
+	</script>
+	
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>	
 <body>
 	<div class="container">
-		<div class="header">
+	
+		<!--header-->
+		<header class="header">
 			<img src="tendaku.jpg">
 			<div class="breadcrumbs">
 			
 			</div>
 			<div class="navbar">
-				<ul class="navlist">
-					<li>Beranda</li>
-					<li>Syarat Sewa</li>
-					<li>Galeri</li>
-					<li>Kontak</li>
+				<ul class="w3-navbar w3-black">
+					<li><a href="#">Beranda</a></li>
+					<li><a href="#">Syarat Sewa</a></li>
+					<li><a href="#">Galeri</a></li>
+					<li><a href="#">Kontak</a></li>
 				</ul>
 			</div>
+		</header>
+		
+		<!--Leftnav-->
+		<nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
+				<a href="javascript:void(0)" onclick="w3_close()"
+				class="w3-closenav w3-large">Close &times;</a>
+				  <li class="w3-dropdown-hover">
+					<a href="#">Tenda<i class="fa fa-caret-down"></i></a>
+					<div class="w3-dropdown-content w3-white w3-card-4">
+					  <a href="#">Harga Sewa</a>
+					  <a href="#">Harga Beli</a>
+					</div>
+				  </li>
+				  <a href="#">Perlengkapan Tidur</a>
+				  <a href="#">Aksesoris</a>
+				  <a href="#">Terpal</a>
+		</nav>
+		
+		<header>
+			<span class="w3-opennav" onclick="w3_open()">&#9776;</span>
+		</header>
+		
+		<!--content-->
+		
+		<div class="w3-content w3-display-middle" style="max-width:800px; margin:0 auto auto;">
+		  <img class="mySlides" src="t1.jpg" style="width:100%; height:350px; display:block;">
+		  <img class="mySlides" src="t2.png" style="width:100%; height:350px;">
+		  <img class="mySlides" src="t3.png" style="width:100%; height:350px;">
+		  <div class="w3-center w3-section w3-large w3-text-white w3-display-bottom middle" style="width:100%">
+			<div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+			<div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+			<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+			<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+			<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+		  </div>
 		</div>
-		<div class="list">
-			<ul class="list-head">
-				<li>Tenda
-					<li>Harga Sewa</li>
-					<li>Harga Beli</li>
-				</li>
-				<li>Perlengkapan Tidur</li>
-				<li>Aksesoris</li>
-				<li>Terpal</li>
-			</ul>
-		</div>
-		<div class="content">
-			<div class="slideshow">
-			
-			</div>
-			<div class="news">
-			
-			</div>
-			<div class="mini-gallery">
-			
-			</div>
-		</div>
-		<div class="right-content">
-			<div class="searchbox">
-			
-			</div>
-			<div class="ads-content">
-			
-			</div>
-		</div>
+		
+		<!--Rightnav-->
+		<nav class="w3-sidenav w3-white w3-card-4" style="width:20%; right:0;">
+		  <br>
+		  <div>
+		  
+		  </div>
+		</nav>
 	</div>
 </body>
 </html>
