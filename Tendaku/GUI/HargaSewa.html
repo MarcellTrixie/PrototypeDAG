@@ -3,16 +3,127 @@
 <html>
 	<head>
 		<title>Harga Sewa</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="mystyles.css">
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	</head>
+	<script>
+		function w3_open() {
+			document.getElementById("mySidenav").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidenav").style.display = "none";
+		}
+		
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+		function currentDiv(n) {
+		  showDivs(slideIndex = n);
+		}
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			 dots[i].className = dots[i].className.replace(" w3-white", "");
+		  }
+		  x[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " w3-white";
+		}
+		function show(i){
+				var o = document.getElementsByClassName("add");
+				o[i].style.display="block";
+			}
+			function hide(i){
+				var o = document.getElementsByClassName("add");
+				o[i].style.display="none";
+			}
+	</script>
+	
+	<style>
+		.mySlides {display:none}
+		.w3-left, .w3-right, .w3-badge {cursor:pointer}
+		.w3-badge {height:13px;width:13px;padding:0;}
+	</style>
+		
 	<body>
-		<div class="w3-container">
-			<div class="w3-navbar">
-				<li><a href="#">Beranda</a></li>
-				<li><a href="#">Syarat Sewa</a></li>
-				<li><a href="#">Galeri</a></li>
-				<li><a href="#">Kontak</a></li>
+		<div class="container">
+
+			<!--header-->
+			<header class="header">
+				<img src="tendaku.jpg">
+				<div class="breadcrumbs">
+				</div>
+				<div class="navbar">
+					<ul class="w3-navbar w3-black">
+						<li><a href="#">Beranda</a></li>
+						<li><a href="#">Syarat Sewa</a></li>
+						<li><a href="#">Galeri</a></li>
+						<li><a href="#">Kontak</a></li>
+					</ul>
+				</div>
+			</header>
+		
+			<!--Leftnav-->
+			<div class="w3-row">
+				<nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
+						<a href="javascript:void(0)" onclick="w3_close()"
+						class="w3-closenav w3-large">Close &times;</a>
+						  <li class="w3-dropdown-hover">
+							<a href="#">Tenda<i class="fa fa-caret-down"></i></a>
+							<div class="w3-dropdown-content w3-white w3-card-4">
+							  <a href="#">Harga Sewa</a>
+							  <a href="#">Harga Beli</a>
+							</div>
+						  </li>
+						  <a href="#">Perlengkapan Tidur</a>
+						  <a href="#">Aksesoris</a>
+						  <a href="#">Terpal</a>
+						<div class="w3-sidenav w3-display-right" style="margin:0;">
+						</div>
+				</nav>
 			</div>
-		</div>
+			<header>
+				<span class="w3-opennav" onclick="w3_open()">&#9776;</span>
+			</header>
+
+			<!--content-->
+			<div class="w3-card-4 w3-center">
+				<header class="w3-container w3-green">
+				  <h1>Harga Sewa Tenda</h1>
+				</header>
+
+				<div class="w3-container" style="text-align: left;">
+					<div onmouseover=show(0) onmouseout=hide(0) class="hasilCari">				<p>Tenda bla bla...</p>
+						<img class="add" src="tenda1.jpg" style="display: none; text-align: center;">
+					</div>
+					<div onmouseover=show(1) onmouseout=hide(1) class="hasilCari">				<p>Tenda bla bla...</p>
+						<img class="add" src="tenda1.jpg" style="display: none; text-align: center;">
+					</div>
+					<div onmouseover=show(2) onmouseout=hide(2) class="hasilCari">				<p>Tenda bla bla...</p>
+						<img class="add" src="tenda1.jpg" style="display: none; text-align: center;">
+					</div>
+					<div onmouseover=show(3) onmouseout=hide(3) class="hasilCari">				<p>Tenda bla bla...</p>
+						<img class="add" src="tenda1.jpg" style="display: none; text-align: center;">
+					</div>
+					<div onmouseover=show(4) onmouseout=hide(4) class="hasilCari">				<p>Tenda bla bla...</p>
+						<img class="add" src="tenda1.jpg" style="display: none; text-align: center;">
+					</div>
+				</div>
+
+				<footer class="w3-container w3-green">
+				  <h5></h5>
+				</footer>
+
+				</div>
+			</div>
 	</body>
 </html>
