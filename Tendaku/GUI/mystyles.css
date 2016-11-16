@@ -1,42 +1,6 @@
 .container{
-	width :1000px;
+	width :1100px;
 	margin:0 auto auto;
 	padding :0;
 	background-color:beige;
-}
-
-.header {
-	width:100%;
-	margin :0;
-	padding :0;
-	background-color:white;
-}
-
-.header img{
-	float:left;
-	margin:15px auto auto;
-	width: 100%;
-	height:200px;
-}
-
-.navbar{
-	float:right;
-	width:100%;
-	height:50px;
-}
-.navlist{
-	width:100%;
-	margin:0;
-	padding:0;
-	list-style:none;
-	
-}
-
-.navlist li{
-	background-color:lightblue;
-	width:24%;
-	height:50px;
-	text-align:center;
-	float:left;
-	margin: 5px;
 }
