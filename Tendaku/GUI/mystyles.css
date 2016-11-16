@@ -4,3 +4,14 @@
 	padding :0;
 	background-color:beige;
 }
+
+.photo img{
+	width : 160px;
+	height : 160px;
+	padding : 3px;
+	margin : 3px;
+}
+
+.content h2{
+	text-align : center;
+}
