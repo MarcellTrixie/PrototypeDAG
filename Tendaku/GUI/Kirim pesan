@@ -47,6 +47,20 @@
 .w3-badge {height:13px;width:13px;padding:0;}
 </style>	
 <body>
+
+
+
+     <style>
+	 
+	   p{
+	      text-align:Center;
+	   }
+	 
+	 </style>
+
+
+
+
 	<div class="container">
 	
 		<!--header-->
@@ -87,97 +101,77 @@
 						
 			<!--Right content-->
 			<div class="w3-right">
-				<h1>test</h1>
+				<h1></h1>
 			</div>
 			
 			<header>
 				<span class="w3-opennav" onclick="w3_open()">&#9776;</span>
 			</header>
 			
-			<!--content-->
-			
-			<div class="w3-content" style="max-width:700px; margin:0 auto auto; padding:0; border:0;">
-			  <img class="mySlides" src="t1.jpg" style="width:100%; height:350px; display:block;">
-			  <img class="mySlides" src="t2.png" style="width:100%; height:350px;">
-			  <img class="mySlides" src="t3.png" style="width:100%; height:350px;">
-			  <div class="w3-center w3-section w3-large w3-text-white w3-display-bottom middle" style="width:100%">
-				<div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-				<div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-				<span class="w3-badge w3-blue demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-				<span class="w3-badge w3-blue demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-				<span class="w3-badge w3-blue demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-			  </div>
-			</div>
+		
 
+			<!--Content-->
+			
 			
 			<p>Kirim Pesan</p>
-
-			<form>
-			<fieldset style="width:100%">
-				<legend></legend>
-				<table>
 			
-			<tr>
+			<div class="w3-content w3-center" style="width:100%; height:200%">
+				
+				<div class="w3-container w3-panel w3-white w3-border" align="left">
+				
+				
+				<br><br><br>
+				
+				       
+					   
+					   <br><br>
+				<tr>
 						<td>Nama</td>
 						<td></td>
 						<td><input type="text" placeholder="Nama" required></td>
 					</tr>
 					
-					<tr>
-						<td>Nomor Telepon</td>
-						<td></td>
-						<td><input type="text" placeholder="Nomor telepon" required></td>
-					</tr>
 					
-					<br><br>
-					 
-					 <tr>
+					  <tr>
+					  <td>No.Telepon</td>
+					  <td><td>
+					  <td><input type="text" placeholder="nomor telepon" required></td>
+					  </tr>
+				    
+					
+					<br><br><br>
+					   <tr>
 						<td>E-mail</td>
 						<td></td>
-						<td><input type="text" placeholder="email" required></td>
+						<td><input type="text" placeholder="e-mail" required></td>
 					</tr>
 					
 					<br><br>
-					
-					<tr>
-						<td>Subject</td>
-						<td></td>
-						<td><input type="text" placeholder="Subject" required></td>
-					</tr>
-					
-					<br><br>
-					
-					
-					
-					<tr>
-						<td>Message</td>
-						<td></td>
-						<td><input type="text" placeholder="Type message here" width = "100%" required></td>
-					</tr>
-			
-			          <br><br>
+					  <tr>
+					  <td> Subject </td>
+					  <td><td>
+					  <td><input type="text" placeholder="Subject" required></td>
+					  </tr>
+					  
+					  <br><br>
+					   <tr>
+					  <td> Message </td>
+					  <td><td>
+					  <br>
+					  <td><input type="text" placeholder="message" style = "width:75%;height:75px;"required></td>
+					  </tr>
+					  
+					  
+					  <br><br>
 					  
 					  <td>
-				<input type = "submit" name = "send" value ="send"
-			
-			  </table>
-			  
-			  </fieldset>
-			
-			
-			
-			<style>
-			
-			  p{
-			  
-			    text-align : center;
-			  }
-			
-			
-			
-			
-			
-			
-			</style>
+				<input type = "submit" name = "send" value ="send"></td>
+				
+				</div>
+				
+				<br>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
