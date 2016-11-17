@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="mystyles.css">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	</head>
+	<script>
+	function w3_open() {
+		document.getElementById("mySidenav").style.display = "block";
+	}
+	function w3_close() {
+		document.getElementById("mySidenav").style.display = "none";
+	}
+	
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-white", "");
+	  }
+	  x[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " w3-white";
+	}
+	
+	</script>
+	
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0;}
+</style>	
+<body>
+	<div class="container">
+	
+		<!--header-->
+		<header class="header">
+			<img src="tendaku.jpg" style="width:100%">
+			<div class="breadcrumbs">
+			
+			</div>
+			<div class="navbar">
+				<ul class="w3-navbar w3-black">
+					<li><a href="#">Beranda</a></li>
+					<li><a href="#">Syarat Sewa</a></li>
+					<li><a href="#">Galeri</a></li>
+					<li><a href="#">Kontak</a></li>
+				</ul>
+			</div>
+		</header>
+		
+		<!--Leftnav-->
+			<div class="w3-row">
+			<nav class="w3-container w3-sidenav w3-white" style="display:none" id="mySidenav">
+					<a href="javascript:void(0)" onclick="w3_close()"
+					class="w3-closenav w3-large">Close &times;</a>
+					  <li class="w3-dropdown-hover">
+						<a href="#">Tenda<i class="fa fa-caret-down"></i></a>
+						<div class="w3-dropdown-content w3-white w3-card-4">
+						  <a href="#">Harga Sewa</a>
+						  <a href="#">Harga Beli</a>
+						</div>
+					  </li>
+					  <a href="#">Perlengkapan Tidur</a>
+					  <a href="#">Aksesoris</a>
+					  <a href="#">Terpal</a>
+					<div class="w3-sidenav w3-display-right" style="margin:0;">
+
+			</div>
+			</nav>
+						
+			<!--Right content-->
+			<div class="w3-right">
+				<h1></h1>
+			</div>
+			
+			<header>
+				<span class="w3-opennav" onclick="w3_open()">&#9776;</span>
+			</header>
+			
+		
+
+			<!--Content-->
+			<div class="w3-content w3-center" style="width:90%;">
+				<header class="w3-border">
+					<h1><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.053784842597!2d107.60380695091935!3d-6.884160995001041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6f6fa7818b5%3A0x6b490ae2f0ac286a!2sTendaku!5e0!3m2!1sen!2sid!4v1479350228520" width="98%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></h1>
+				</header>
+				<div class="w3-container w3-panel w3-white w3-border" align="left">
+					<b>Tendaku</b> <br>
+					Kritik dan Saran: (022) 92136353<br>
+					Tlp. 022 203 5640<br>
+					fax. 022 203 9687<br><br>
+					<b>Merketing</b> :<br>
+					Arnold 08172308338 (SMS Only)<br>
+					No. rekening : 7771458673<br>
+					Atas Nama : Arnold Simanjuntak<br>
+					Pin BB : 57c2d833<br>
+					Email : tendaku_mrcamp@yahoo.com<br><br>
+					<b>Alamat</b><br>
+					Jln. Siliwangi no.56 Bandung<br>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
