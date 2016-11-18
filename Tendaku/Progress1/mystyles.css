@@ -1,0 +1,49 @@
+.container{
+	width :1100px;
+	margin:0 auto auto;
+	padding :0;
+	background-color:beige;
+}
+
+.photo img{
+	width : 160px;
+	height : 160px;
+	padding : 3px;
+	margin : 3px;
+}
+
+#miniGalleri img{
+	width : 160px;
+	height : 140px;
+	padding : 3px;
+	margin : 3px;
+}
+
+.content h2, h2{
+	text-align : center;
+}
+
+.mySlides{
+	display:none
+}
+
+.w3-left, .w3-right, .w3-badge{
+	cursor:pointer;
+}
+
+nav{
+    width: 0; /* 0 width - change this with JavaScript */
+    position: relative; /* Stay in place */
+    z-index: 1; /* Stay on top */
+
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.w3-badge {
+	height:17px;
+	width:5px;
+	padding:0;
+}

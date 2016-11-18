@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Message</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="mystyles.css">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	</head>
+	
+	<script>
+		function w3_open() {
+			document.getElementById("mySidenav").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidenav").style.display = "none";
+		}
+	</script>
+	
+	<body>
+		
+		<div class="container">
+		
+			<!--header-->
+			<header class="header">
+				<img src="tendaku.jpg" style="width:100%">
+				<div class="breadcrumbs">
+				
+				</div>
+				<div class="navbar">
+					<ul class="w3-navbar w3-black">
+						<li><a href="#">Beranda</a></li>
+						<li><a href="#">Syarat Sewa</a></li>
+						<li><a href="#">Galeri</a></li>
+						<li><a href="#">Kontak</a></li>
+					</ul>
+				</div>
+			</header>
+			
+			<!--Leftnav-->
+			<div class="w3-row">
+				<nav class="w3-container w3-sidenav w3-white" style="display:none" id="mySidenav">
+					<a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
+					<li class="w3-dropdown-hover">
+						<a href="#">Tenda<i class="fa fa-caret-down"></i></a>
+						<div class="w3-dropdown-content w3-white w3-card-4">
+							<a href="#">Harga Sewa</a>
+							<a href="#">Harga Beli</a>
+						</div>
+					</li>
+					<a href="#">Perlengkapan Tidur</a>
+					<a href="#">Aksesoris</a>
+					<a href="#">Terpal</a>
+					
+					<div class="w3-sidenav w3-display-right" style="margin:0;">
+					
+					</div>
+				</nav>
+							
+				<!--Right content-->
+				<div class="w3-right">
+					<h1>test</h1>
+				</div>
+					
+				<header>
+					<span class="w3-opennav" onclick="w3_open()">&#9776;</span>
+				</header>
+				
+				<!--content-->
+				<div class="w3-container w3-half">
+					<h2>Kirim Pesan</h2>
+
+					<form>
+						<fieldset style="width:100%">
+							<table align="center">
+								<tr>
+									<td>Nama</td>
+									<td><input type="text" placeholder="Nama" required></td>
+								</tr>
+							
+								<tr>
+									<td>No. Telepon</td>
+									<td><input type="text" placeholder="Nomor telepon" required></td>
+								</tr>
+							 
+								<tr>
+									<td>E-mail</td>
+									<td><input type="text" placeholder="Email" required></td>
+								</tr>
+							
+								<tr>
+									<td>Subject</td>
+									<td><input type="text" placeholder="Subject" required></td>
+								</tr>
+								
+								<tr>
+									<td>Message</td>
+									<td><input type="text" placeholder="Type message here" width = "100%" required></td>
+								</tr>
+							  
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+								
+								<tr>
+									<td></td>
+									<td><input type = "submit" name = "send" value ="send"</td>
+								</tr>
+								
+							</table>
+						</fieldset>
+					</form>
+					
+				</div>
+				
+			</div>
+			
+			<!--Footer-->
+			<div class="w3-container w3-black" style="padding:10px;">
+				<center>
+					&#169 Tendaku.net IJO 2016
+				</center>
+			</div>
+			
+		</div>
+			
+	</body>
+</html>

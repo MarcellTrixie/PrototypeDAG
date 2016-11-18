@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Galeri</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="mystyles.css">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	</head>
+	
+	<script>
+	
+		function w3_open() {
+			document.getElementById("mySidenav").style.display = "block";
+		}
+		function w3_close() {
+			document.getElementById("mySidenav").style.display = "none";
+		}
+		
+	</script>
+	
+	<body>
+	
+		<div class="container">
+		
+			<!--header-->
+			<header class="header">
+				<img src="tendaku.jpg" style="width:100%">
+				<div class="breadcrumbs">
+				
+				</div>
+				<div class="navbar">
+					<ul class="w3-navbar w3-black">
+						<li><a href="home.html">Beranda</a></li>
+						<li><a href="#">Syarat Sewa</a></li>
+						<li><a href="galleri.html">Galeri</a></li>
+						<li><a href="kontak.html">Kontak</a></li>
+					</ul>
+				</div>
+			</header>
+			
+			<!--Leftnav-->
+			<nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
+				<a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
+				<li class="w3-dropdown-hover">
+					<a href="#">Tenda<i class="fa fa-caret-down"></i></a>
+					<div class="w3-dropdown-content w3-white w3-card-4">
+					  <a href="#">Harga Sewa</a>
+					  <a href="#">Harga Beli</a>
+					</div>
+				</li>
+				<a href="#">Perlengkapan Tidur</a>
+				<a href="#">Aksesoris</a>
+				<a href="#">Terpal</a>
+			</nav>
+			
+			<header>
+				<span class="w3-opennav" onclick="w3_open()">&#9776;</span>
+			</header>
+			
+			<!--content-->
+			
+			<div class="w3-container">
+				
+				<h2>Galeri Foto Tendaku</h2>
+				
+				<div class="photo" >
+				
+					<table align = "center">
+						<tr>
+							<td><img src="galleri\tenda1.jpg"/></td>
+							<td><img src="galleri\tenda2.jpg"/></td>
+							<td><img src="galleri\tenda3.jpg"/></td>
+							<td><img src="galleri\tenda4.jpg"/></td>
+						</tr>
+						
+						<tr>
+							<td><img src="galleri\tenda5.jpg"/></td>
+							<td><img src="galleri\tenda6.jpg"/></td>
+							<td><img src="galleri\tenda7.jpg"/></td>
+							<td><img src="galleri\tenda8.jpg"/></td>
+						</tr>
+						
+						<tr>
+							<td><img src="galleri\tenda2.jpg"/></td>
+							<td><img src="galleri\tenda4.jpg"/></td>
+							<td><img src="galleri\tenda1.jpg"/></td>
+							<td><img src="galleri\tenda3.jpg"/></td>
+						</tr>
+						
+						<tr>
+							<td><img src="galleri\tenda6.jpg"/></td>
+							<td><img src="galleri\tenda8.jpg"/></td>
+							<td><img src="galleri\tenda5.jpg"/></td>
+							<td><img src="galleri\tenda7.jpg"/></td>
+						</tr>
+						
+					</table>
+					
+				</div>
+				
+			</div>
+			
+			<!--Rightnav-->
+			<nav class="w3-sidenav w3-white w3-card-4" style="width:20%; right:0;">
+				<br>
+				<div>
+			  
+				</div>
+			</nav>
+			<br>
+			
+			<!--Number Show-->
+			<div class="w3-center">
+				<ul class="w3-pagination">
+					<li><a href="">&laquo;</a></li>
+					<li><a class="w3-green" href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">&raquo;</a></li>
+				</ul>
+			</div>
+			<br>
+			<br>
+			
+			<!--Footer-->
+			<div class="w3-container w3-black" style="padding:10px;">
+				<center>
+					&#169 Tendaku.net IJO 2016
+				</center>
+			</div>
+			
+		</div>
+	</body>
+	
+</html>
