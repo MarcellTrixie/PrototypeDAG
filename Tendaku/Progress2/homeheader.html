@@ -2,120 +2,123 @@
 
 <html>
 
-	<head>
-		<title>Beranda</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="mystyles.css">
-		<link rel="stylesheet" href="lib/w3.css">
-		<link rel="stylesheet" href="lib/w3-theme-sbux.css">
-		<link rel="stylesheet" href="lib/font-awesome.min.css">
-		<link rel="stylesheet" href="lib/font-awesome.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-colors-highway.css">	
-		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	</head>
+<head>
+	<title>Beranda</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="mystyles.css">
+	<link rel="stylesheet" href="lib/w3.css">
+	<link rel="stylesheet" href="lib/w3-theme-sbux.css">
+	<link rel="stylesheet" href="lib/font-awesome.min.css">
+	<link rel="stylesheet" href="lib/font-awesome.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-colors-highway.css">	
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 	
-	<script>
-		function myFunction(id) {
-			var x = document.getElementById(id);
-			if (x.className.indexOf("w3-show") == -1) {
-				x.className += " w3-show";
-			} else {
-				x.className = x.className.replace(" w3-show", "");
-			}
-		}
-		
-		var slideIndex = 1;
-		showDivs(slideIndex);
+<script>
 
-		function plusDivs(n) {
-			showDivs(slideIndex += n);
+	function myFunction(id) {
+		var x = document.getElementById(id);
+		if (x.className.indexOf("w3-show") == -1) {
+			x.className += " w3-show";
+		} else {
+			x.className = x.className.replace(" w3-show", "");
 		}
+	}
+	
+	var slideIndex = 1;
+	showDivs(slideIndex);
 
-		function currentDiv(n) {
-			showDivs(slideIndex = n);
-		}
+	function plusDivs(n) {
+		showDivs(slideIndex += n);
+	}
 
-		function showDivs(n) {
-			var i;
-			var x = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("demo");
-			if (n > x.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = x.length}
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" w3-white", "");
-			}
-			x[slideIndex-1].style.display = "block";
-			dots[slideIndex-1].className += " w3-white";
+	function currentDiv(n) {
+		showDivs(slideIndex = n);
+	}
+
+	function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		if (n > x.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = x.length}
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
 		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" w3-white", "");
+		}
+		x[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " w3-white";
+	}
+
+</script>
+
+<body style="overflow-y:hidden;">
 	
-	</script>
+	<div class="w3-container" style="margin: 0 auto auto; width:1200px;">
 	
-	<body style="overflow-y:hidden;">
-	
-		<div class="w3-container" style="margin: 0 auto auto; width:1200px;">
-		
-			<!--header-->
-			<div class="w3-header" style="width:1200px; padding:0; position:fixed;z-index:1;top:0;">
-				<img src="tendaku.jpg" style="width:100%">
-				
-				<div class="breadcrumbs">
-				
-				</div>
-				
-				<div class="w3-navbar">
-					<ul class="w3-navbar w3-black">
-						<li class="w3-quarter w3-center"><a href="home.html">Beranda</a></li>
-						<li class="w3-quarter w3-center"><a href="#">Syarat Sewa</a></li>
-						<li class="w3-quarter w3-center"><a href="galleri.html">Galeri</a></li>
-						<li class="w3-quarter w3-center"><a href="kontak.html">Kontak</a></li>
-					</ul>
-				</div>
+		<!--header-->
+		<div class="w3-header" style="width:1200px; padding:0; position:fixed;z-index:1;top:0;">
+			<img src="tendaku.jpg" style="width:100%">
+			
+			<div class="breadcrumbs">
+			
 			</div>
-			
-			<!--Body-->
-			<div class="w3-container w3-pale-yellow" style="width:1200px;padding:0; margin-top:29%;">
+				
+			<div class="w3-navbar">
+				<ul class="w3-navbar w3-black">
+					<li class="w3-quarter w3-center"><a href="home.html">Beranda</a></li>
+					<li class="w3-quarter w3-center"><a href="#">Syarat Sewa</a></li>
+ 					<li class="w3-quarter w3-center"><a href="galleri.html">Galeri</a></li>
+ 					<li class="w3-quarter w3-center"><a href="kontak.html">Kontak</a></li>
+ 				</ul>
+ 			</div>
+ 		</div>
+ 		
+ 		<!--Body-->
+ 		<div class="w3-container w3-pale-yellow" style="width:1200px;padding:0; margin-top:29%;">
+ 		
 			<!--Leftnav-->
-			
-				<nav class="w3-container w3-margin w3-rightbar w3-pale-yellow" style="width:9%;padding:0; margin:0; position:fixed ; z-index:1;">
-					<div class="w3-content w3-margin">
+ 			<nav class="w3-container w3-margin w3-rightbar w3-pale-yellow" style="width:9%;padding:0; margin:0; position:fixed ; z-index:1;">
+ 				<div class="w3-content w3-margin">
 					<div class="w3-accordion " onmouseover="myFunction('tenda')" onmouseout="myFunction('tenda')" >Tenda<i class="fa fa-caret-down"></i>
 						<div class="w3-accordion-content w3-bottombar" id="tenda">
 							<a href="hargasewa.html">Harga Sewa</a>
 							<a href="#">Harga Beli</a>
 						</div>
 					</div>
-					</div> 
-					<div class="w3-content w3-margin">
+ 				</div> 
+ 				<div class="w3-content w3-margin">
 					<a href="#">Perlengkapan Tidur</a>
-					</div>
-					<div class="w3-content w3-margin">
+ 				</div>
+ 				<div class="w3-content w3-margin">
 					<a href="#">Aksesoris</a>
-					</div>
-					<div class="w3-content w3-margin">
+ 				</div>
+ 				<div class="w3-content w3-margin">
 					<a href="#">Terpal</a>
-					</div>
-				</nav>	
-			
+				</div>
+ 			</nav>	
+ 		
 			<!--Right content-->
 			<div class="w3-right">
+			
 				<!--SearchBox-->
 				<div class="wrapper w3-margin">
 					<input class="search" type="text" id="search">
 				</div>
-				
+					
 				<!--Ads-->
 				<div>
-				
+					
 				</div>
-			</div>
 				
+			</div>
+ 			
 			<!--content-->
 			<div class="w3-container">
 				
@@ -134,7 +137,7 @@
 						<div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
 					</div>
 				</div>
-
+				
 				<div class="w3-content w3-center" style="width:70%;">
 					
 					<br>
@@ -170,7 +173,7 @@
 						<header class="w3-container">
 							<h2>Mini Galeri</h2>
 						</header>
-							
+						
 						<div class="w3-row" id="miniGalleri">
 							<div class="w3-container w3-quarter">
 								<img src="galleri\mingal1.jpg" style="width:100%">
@@ -194,16 +197,20 @@
 						
 				</div>
 				
-				<!--Footer-->
-				<div class="w3-container w3-black" style="padding:10px;">
-					<center>
-						&#169 Tendaku.net IJO 2016
-					</center>
-				</div>
+				
 			</div>
-			
+ 		
 		</div>
 		
-	</body>
+		<!--Footer-->
+		<div class="w3-container w3-black" style="padding:10px;">
+			<center>
+				&#169 Tendaku.net IJO 2016
+			</center>
+		</div>
+ 	
+	</div>
 	
-</html>
+ </body>
+ 
+ </html>
