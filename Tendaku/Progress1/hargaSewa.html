@@ -6,13 +6,17 @@
 		<title>Harga Sewa</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="mystyles.css">
+		<link rel="stylesheet" href="lib/w3.css">
+		<link rel="stylesheet" href="lib/w3-theme-sbux.css">
+		<link rel="stylesheet" href="lib/font-awesome.min.css">
+		<link rel="stylesheet" href="lib/font-awesome.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-colors-highway.css">	
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
-	<style>
-		img{
-			margin: 0 auto;
-		}
-	</style>
 	<script>
 	
 		function w3_open() {
@@ -52,7 +56,11 @@
 		
 		function show(i){
 			var o = document.getElementsByClassName("add");
-			o[i].style.display="block";
+			if(o[i].style.display=="none"){
+				o[i].style.display="block";
+			} else {
+				o[i].style.display="none";
+			}
 		}
 		
 		function hide(i){
@@ -61,88 +69,91 @@
 		}
 	</script>
 		
-	<body>
+	<body style="overflow-y:hidden;">
 	
-		<div class="container">
+		<div class="w3-container" style="margin: 0 auto auto; width:1200px;">
 
 			<!--header-->
-			<header class="header">
-				<img src="tendaku.jpg">
+			<div class="w3-header" style="width:1200px;padding:0; position:fixed;z-index:1;top:0;">
+				<img src="tendaku.jpg" style="width:100%; padding:0;">
 				<div class="breadcrumbs">
 				</div>
-				<div class="navbar">
+				<div class="w3-navbar">
 					<ul class="w3-navbar w3-black">
-						<li><a href="home.html">Beranda</a></li>
-						<li><a href="#">Syarat Sewa</a></li>
-						<li><a href="#">Galeri</a></li>
-						<li><a href="#">Kontak</a></li>
-					</ul>
-				</div>
-			</header>
-		
-			<!--Leftnav-->
-			<div class="w3-row">
-				<nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
-					<a href="javascript:void(0)" onclick="w3_close()"
-					class="w3-closenav w3-large">Close &times;</a>
-					<li class="w3-dropdown-hover">
-						<a href="#">Tenda<i class="fa fa-caret-down"></i></a>
-						<div class="w3-dropdown-content w3-white w3-card-4">
-							<a href="#">Harga Sewa</a>
-							<a href="#">Harga Beli</a>
-						</div>
-					</li>
-					<a href="#">Perlengkapan Tidur</a>
-					<a href="#">Aksesoris</a>
-					<a href="#">Terpal</a>
-					<div class="w3-sidenav w3-display-right" style="margin:0;">
-					</div>
-				</nav>
+						<li class="w3-quarter w3-center"><a href="home.html">Beranda</a></li>
+						<li class="w3-quarter w3-center"><a href="#">Syarat Sewa</a></li>
+	 					<li class="w3-quarter w3-center"><a href="galleri.html">Galeri</a></li>
+	 					<li class="w3-quarter w3-center"><a href="kontak.html">Kontak</a></li>
+	 				</ul>
+ 				</div>
 			</div>
+		
 			
-			<header>
-				<span class="w3-opennav" onclick="w3_open()">&#9776;</span>
-			</header>
+			<div class="w3-container w3-pale-yellow" style="width:1200px;padding:0; margin-top:29%;">
+
+			<!--Leftnav-->
+				<nav class="w3-container w3-margin w3-rightbar w3-pale-yellow" style="width:9%;padding:0; margin:0; position:fixed ; z-index:1;">
+	 				<div class="w3-content w3-margin">
+						<div class="w3-accordion " onmouseover="myFunction('tenda')" onmouseout="myFunction('tenda')" >Tenda<i class="fa fa-caret-down">	</i>
+							<div class="w3-accordion-content w3-bottombar" id="tenda">
+								<a href="hargasewa.html">Harga Sewa</a>
+								<a href="#">Harga Beli</a>
+							</div>
+						</div>
+	 				</div> 
+	 				<div class="w3-content w3-margin">
+						<a href="#">Perlengkapan Tidur</a>
+	 				</div>
+	 				<div class="w3-content w3-margin">
+						<a href="#">Aksesoris</a>
+	 				</div>
+	 				<div class="w3-content w3-margin">
+						<a href="#">Terpal</a>
+					</div>
+ 				</nav>
 
 			<!--content-->
-			<div class="w3-card-4 w3-center">
-			
-				<header class="w3-container w3-green">
-					<h1>Harga Sewa Tenda</h1>
-				</header>
-
 				<div class="w3-container">
-					<div onmouseover=show(0) onmouseout=hide(0) class="hasilCari">				
-						<p>Tenda bla bla...</p>
-						<img class="add" src="galleri/tenda1.jpg" style="display: none;">
-					</div>
-					<div onmouseover=show(1) onmouseout=hide(1) class="hasilCari">				
-						<p>Tenda bla bla...</p>
-						<img class="add" src="galleri/tenda2.jpg" style="display: none;">
-					</div>
-					<div onmouseover=show(2) onmouseout=hide(2) class="hasilCari">				
-						<p>Tenda bla bla...</p>
-						<img class="add" src="galleri/tenda3.jpg" style="display: none;">
-					</div>
-					<div onmouseover=show(3) onmouseout=hide(3) class="hasilCari">				
-						<p>Tenda bla bla...</p>
-						<img class="add" src="galleri/tenda4.jpg" style="display: none;">
-					</div>
-					<div onmouseover=show(4) onmouseout=hide(4) class="hasilCari">				
-						<p>Tenda bla bla...</p>
-						<img class="add" src="galleri/tenda5.jpg" style="display: none;">
-					</div>
-				</div>
+					<div class="w3-card-4 w3-center" style="width:80%;margin-left:15%;">
+					
+						<header class="w3-container w3-green">
+							<h1>Harga Sewa Tenda</h1>
+						</header>
 
-				<!--Footer-->
-				<div class="w3-container w3-black" style="padding:10px;">
-					<center>
-						&#169 Tendaku.net IJO 2016
-					</center>
-				</div>
+						<div class="w3-container">
+							<div onclick=show(0) class="hasilCari">				
+								<p>Tenda bla bla...</p>
+								<img class="add" src="t1.jpg" style="display: none; margin: 0 auto;">
+							</div>
+							<div onclick=show(1) onclick=hide(1) class="hasilCari">				
+								<p>Tenda bla bla...</p>
+								<img class="add" src="t1.jpg" style="display: none; margin: 0 auto;">
+							</div>
+							<div onclick=show(2) onclick=hide(2) class="hasilCari">				
+								<p>Tenda bla bla...</p>
+								<img class="add" src="t1.jpg" style="display: none; margin: 0 auto;">
+							</div>
+							<div onclick=show(3) onclick=hide(3) class="hasilCari">				
+								<p>Tenda bla bla...</p>
+								<img class="add" src="t1.jpg" style="display: none; margin: 0 auto;">
+							</div>
+							<div onclick=show(4) onclick=hide(4) class="hasilCari">				
+								<p>Tenda bla bla...</p>
+								<img class="add" src="t1.jpg" style="display: none; margin: 0 auto;">
+							</div>
+						</div>
 
+					</div>
+
+						<!--Footer-->
+						<div class="w3-container w3-black" style="padding:10px;">
+							<center>
+								&#169 Tendaku.net IJO 2016
+							</center>
+						</div>
+
+				</div>
 			</div>
-			
 		</div>
 		
 	</body>
